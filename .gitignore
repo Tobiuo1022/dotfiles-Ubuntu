@@ -1,0 +1,13 @@
+*
+
+!.bash_aliases
+!.bash_profile
+!.bashrc
+!.config/git/ignore
+!.config/nvim/init.vim
+!.gitignore
+!.ssh/config
+!init.sh
+!task/install.sh
+!task/link.sh
+!task/setting.sh
