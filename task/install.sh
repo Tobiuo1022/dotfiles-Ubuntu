@@ -41,7 +41,6 @@ sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin dock
 
 # Mount to google Drive. 
 sudo add-apt-repository ppa:alessandro-strada/ppa
-sudo apt update
 sudo apt install google-drive-ocamlfuse
 
 mkdir ~/gdrive

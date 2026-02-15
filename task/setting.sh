@@ -27,3 +27,7 @@ gsettings set org.gnome.shell.extensions.tiling-assistant enable-tiling-popup fa
 # Set for touchpad. 
 gsettings set org.gnome.desktop.peripherals.touchpad speed 0.4
 gsettings set org.gnome.desktop.interface locate-pointer true
+
+# Git.
+git config --global init.defaultBranch main
+git config --global core.editor vim
