@@ -8,6 +8,7 @@
 !.gitignore
 !.ssh/config
 !init.sh
+!README.md
 !task/install.sh
 !task/link.sh
 !task/setting.sh
