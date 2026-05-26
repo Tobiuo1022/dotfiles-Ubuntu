@@ -45,7 +45,3 @@ sudo apt install google-drive-ocamlfuse
 mkdir -p ~/gdrive
 google-drive-ocamlfuse ~/gdrive/
 ```
-
-## バックアップ
-
-`task/link.sh` 実行時、既存の dotfiles は `~/.dotfiles_backup/<timestamp>/` に退避されます。
