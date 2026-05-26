@@ -2,9 +2,13 @@
 set number
 set showcmd
 set laststatus=2
+set scrolloff=8
+set termguicolors
 " search
 set hlsearch
 set incsearch
+set ignorecase
+set smartcase
 " indent
 set tabstop=4
 set shiftwidth=4
