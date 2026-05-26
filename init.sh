@@ -1,24 +1,29 @@
 #!/bin/bash
+set -e
 
 # Update apt.
 sudo apt update
 sudo apt -y upgrade
 
-# Make ssh keys. 
-ssh-keygen -t ed25519
+# Install git first.
+sudo apt install -y git
+
+# Make ssh keys.
+ssh-keygen -t ed25519 -C "$(whoami)@$(hostname)"
+eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
-ssh-add -l
 
-# Clone the files on Github. 
-apt install git
-
-printf "GitHubに公開鍵を貼り付けてください. "
+echo "GitHubに公開鍵を登録してください:"
 cat ~/.ssh/id_ed25519.pub
-read enter
+read -rp "登録が完了したらEnterを押してください..."
 
-git clone git@github.com:Tobiuo1022/dotfiles ~/dotfiles
+# Clone dotfiles.
+DOTFILES_DIR="$HOME/dotfiles-Ubuntu"
+if [ ! -d "$DOTFILES_DIR/.git" ]; then
+    git clone git@github.com:Tobiuo1022/dotfiles-Ubuntu "$DOTFILES_DIR"
+fi
 
-# run the scripts. 
-bash ~/dotfiles/task/setting.sh
-bash ~/dotfiles/task/install.sh
-bash ~/dotfiles/task/link.sh
+# Run setup scripts.
+bash "$DOTFILES_DIR/task/setting.sh"
+bash "$DOTFILES_DIR/task/install.sh"
+bash "$DOTFILES_DIR/task/link.sh"
