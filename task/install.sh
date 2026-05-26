@@ -21,8 +21,9 @@ if ! asdf list nodejs 2>/dev/null | grep -q "24.12.0"; then
 fi
 asdf global nodejs 24.12.0
 
-# markmap
+# npm global packages
 npm install -g markmap-cli
+npm install -g @anthropic-ai/claude-code
 
 # fzf vim plugins
 NVIM_PACK="$HOME/.config/nvim/pack/vendo/start"

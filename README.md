@@ -31,6 +31,7 @@ Ubuntu セットアップ用 dotfiles。
 | asdf | バージョンマネージャ |
 | Node.js 24.12.0 | JavaScript ランタイム |
 | markmap-cli | Markdown マインドマップ |
+| claude-code | Claude CLI (AI コーディング) |
 | Docker | コンテナ |
 | powertop | 電力最適化 |
 
